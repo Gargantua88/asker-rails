@@ -10,13 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_30_104329) do
+ActiveRecord::Schema.define(version: 2018_10_11_112357) do
 
   create_table "questions", force: :cascade do |t|
     t.string "text"
     t.string "answer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_questions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -24,6 +26,12 @@ ActiveRecord::Schema.define(version: 2018_09_30_104329) do
     t.string "username"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "email"
+    t.string "password_hash"
+    t.string "password_salt"
+    t.string "avatar_url"
+    t.string "background", default: "#005a55"
+    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
 end

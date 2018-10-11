@@ -1,24 +1,12 @@
-# README
+## Простой клон сайта ask.fm
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Тут можно будет когда-нибудь задать вопросы и получить ответы. Или же дать ответ. Или же еще что-нибудь, там видно будет!
+А вот [тут](https://ask.fm/) лежит оригинал сайта.
 
-Things you may want to cover:
+### Запуск
 
-* Ruby version
+Перед запуском требуется выполнить `>bundle install`
 
-* System dependencies
+### Лицензия
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Программа свободная, пользуйтесь кто хотите.
