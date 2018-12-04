@@ -52,7 +52,7 @@ class User < ApplicationRecord
   end
 
   def username_downcase
-    username.downcase! if username.present?
+    self.username = username.downcase
   end
 
 end
