@@ -1,9 +1,9 @@
 <div class="question">
   <div class="question-content">
     <div class="question-text">
-      <%= link_to "@#{question.author.username}", user_path(question.author) if question.author%>
-      <%= "аноним" if question.author.nil?%>
-      <%= "спрашивает:" %>
+      <%= question.author ? (link_to "@#{question.author.username}", user_path(question.author), class: "question-link")
+              : "аноним" %>
+      cпрашивает:
       <div class="question-text text-lead">
         <%= question.text %>
       </div>
