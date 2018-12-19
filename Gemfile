@@ -8,6 +8,8 @@ gem 'rails', '~> 5.2.1'
 
 gem 'rails_12factor'
 
+gem 'recaptcha'
+
 gem 'uglifier'
 
 # Use Puma as the app server
