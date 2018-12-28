@@ -11,3 +11,15 @@
     </div>
   <% end %>
 </div>
+
+<div class="content-wrapper buffer-both text-center">
+  <div class="buffer-both">
+    <h2 class="title-medium">Наши хештеги</h2>
+  </div>
+
+  <div class="hashtags">
+    <% @hashtags.each do |tag| %>
+      <%= link_to tag.body, hashtag_path(tag), class: "question-link" %>
+    <% end %>
+  </div>
+</div>
