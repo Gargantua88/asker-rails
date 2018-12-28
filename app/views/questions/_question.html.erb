@@ -7,6 +7,12 @@
       <div class="question-text text-lead">
         <%= question.text %>
       </div>
+
+      <div class="hashtags">
+        <% question.hashtags.each do |tag| %>
+          <%= link_to tag.body, hashtag_path(tag), class: "question-link" %>
+        <% end %>
+      </div>
     </div>
 
     <% if question.answer.present? %>

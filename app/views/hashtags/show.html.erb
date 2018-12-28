@@ -1,0 +1,8 @@
+<div class="buffer-top question">
+  <h2 class="buffer-bottom text-center">Все вопросы с хештегом <%= link_to @tag.body, hashtag_path(@tag),
+                                                                           class: "question-link" %></h2>
+
+  <% @questions.each do |question| %>
+    <%= render partial: 'questions/question', object: question %>
+  <% end %>
+</div>
