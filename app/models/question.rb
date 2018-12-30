@@ -10,8 +10,7 @@ class Question < ApplicationRecord
   before_save :check_hashtags
 
   def check_hashtags
-    all_hashtags = text.downcase.scan(/#[[:word:]]+/)
-    all_hashtags += answer.downcase.scan(/#[[:word:]]+/) if answer.present?
+    all_hashtags = (text + ' ' + answer.to_s).downcase.scan(/#[[:word:]]+/)
 
     self.hashtags = all_hashtags.uniq.map do |tag|
       Hashtag.find_or_initialize_by(body: tag)
