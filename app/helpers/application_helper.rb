@@ -26,4 +26,14 @@ module ApplicationHelper
   def fa_icon(icon_class)
     content_tag 'span', '', class: "fa fa-#{icon_class}"
   end
+
+  def options_for_background
+    [
+        [''],
+        ['Черный','black'],
+        ['Зеленый','darkgreen'],
+        ['Синий','darkblue'],
+        ['Бордовый','maroon']
+    ]
+  end
 end

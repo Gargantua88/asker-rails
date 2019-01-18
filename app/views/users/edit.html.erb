@@ -30,7 +30,7 @@
 
       <div class="form-field">
         <%= f.label 'Выберите цвет странички', class: 'form-label' %>
-        <%= f.select :background, ['', 'black', 'darkgreen', 'darkblue', 'maroon'], :prompt => 'Select One' %>
+        <%= f.select :background, options_for_background, {}, :prompt => 'Select One' %>
       </div>
 
       <div class="buffer-top-large buffer-bottom">
